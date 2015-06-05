@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    meta(name='viewport', content='initial-scale=1.0, user-scalable=no, maximum-scale=1, minimal-ui')
+    meta(name="apple-mobile-web-app-capable", content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style", content="black")
+    
+    link(href="/stylesheets/ratchet.min.css", rel="stylesheet")
+    
+    script(type='text/javascript', src='/js/zepto.min.js')
+    title MotorCade
+  body
+    header.bar.bar-nav
+      h1.title 登录
+    div.content
+      form.input-group(action="/signin", method="post")
+        .input-row
+          label 用户名
+          input(type="text", placeholder="", name="username")
+        .input-row
+          label 密码
+          input(type="password", placeholder="", name="pwd")
+        .input-row
+          button.btn.btn-positive.btn-block 提交
+    nav.bar.bar-tab
+      a.tab-item.active(href="#")
+        span.icon.icon-home
+        span.tab-label Home
+      a.tab-item(href="#")
+        span.icon.icon-person
+        span.tab-label Profile
+      a.tab-item(href="#")
+        span.icon.icon-star-filled
+        span.tab-label Favorites
+      a.tab-item(href="#")
+        span.icon.icon-search
+        span.tab-label Search
+      a.tab-item(href="#")
+        span.icon.icon-gear
+        span.tab-label Settings
