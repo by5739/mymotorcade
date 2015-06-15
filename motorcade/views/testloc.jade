@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
+    meta(name="viewport", content="initial-scale=1.0, user-scalable=no")
+    script(src="http://api.map.baidu.com/components?ak=AF5efef9b370d45bcd0dc398ca37d1ae&v=1.0")
+    title &#23450;&#20301;&#32452;&#20214;
+    style(type="text/css")
+      body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;}
+      #golist {display: none;}
+      @media (max-device-width: 800px){#golist{display: block!important;}}
+  body
+    a#golist(href="../demolist.htm") &#36820;&#22238;demo&#21015;&#34920;&#39029;
+    lbs-map(center="116.404,39.915", style="height:91%")
+    div
+      lbs-geo(city="北京", enable-modified="false")

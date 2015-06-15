@@ -34,7 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(function (req, res, next) {
     var url = req.originalUrl;
     console.log("originalUrl:" + url);
-    var accessUrls = {"/":"/", "/signin":"/signin", "/signout":"/signout"};
+    var accessUrls = {"/":"/", "/signin":"/signin", "/signout":"/signout","/testloc":"/testloc"};
     if (!accessUrls[url] && !req.session.username) {
         return res.redirect("/");
     }
@@ -52,6 +52,8 @@ app.get('/', routes.index);
 app.get('/users', user.list);
 app.get('/motorcade', motorcade.index);
 app.post('/signin', auth.signin);
+app.get('/testloc', motorcade.testloc);
+
 
 var server = http.createServer(app);
 
